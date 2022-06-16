@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package test_proto;
+
+service WWD {
+    // Obtains the feature at a given position.
+    rpc TransformData(SetData) returns (GetData) {}
+}
+
+message SetData {
+    string data = 1;
+}
+
+message GetData {
+    string getData = 1;
+}
